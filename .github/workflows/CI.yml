@@ -13,11 +13,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.2
 
-      - name: Install ESLint
-        run: npm init @eslint/config@1.4.0
-        
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v4.1.0
-
       - name: Run ESLint
         run: npm run lint
