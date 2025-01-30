@@ -16,12 +16,5 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.1.0
 
-      - name: Install Dependencies
-        run: npm i
-      - name: Run Tests
-        run: npm test
-        
-      - name: Install modules
-        run: npm init @eslint/config@latest
       - name: Run ESLint
-        run: npm run eslint
+        run: npm run lint
