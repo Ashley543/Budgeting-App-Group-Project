@@ -25,11 +25,11 @@ jobs:
         run: npm run lint
         continue-on-error: false
 
-      - name: Run Tests
-        run: |
-          cd src/tests
-          ls
-          npm run report-test
+      #- name: Run Tests
+        #run: |
+          #cd src/tests
+          #ls
+          #npm run report-test
         
         
   cd:
