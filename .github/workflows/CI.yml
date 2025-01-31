@@ -27,7 +27,7 @@ jobs:
 
       - name: Run Tests
         run: |
-          ls
+          cd project
           npm test
           
         
