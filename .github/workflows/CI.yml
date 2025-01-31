@@ -26,7 +26,10 @@ jobs:
         continue-on-error: false
 
       - name: Run Tests
-        run: /src/tests/repots.test.js
+        run: |
+          cd /src/tests
+          ls
+          repots.test.js
           
         
         
