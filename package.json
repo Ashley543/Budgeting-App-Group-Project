@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node reports.test.js"
     "build": "rollup -c",
     "watch": "rollup -c -w",
     "serve": "serve dist",
