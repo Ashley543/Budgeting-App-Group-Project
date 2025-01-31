@@ -31,7 +31,7 @@ jobs:
           cd src/tests
           ls
           chmod u+x reports.test.js
-          npm ./reports.test.js
+          npm run ./reports.test.js
           
         
         
