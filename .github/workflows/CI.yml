@@ -30,7 +30,7 @@ jobs:
           ls
           cd src/tests
           ls
-          repots.test.js
+          reports.test.js
           
         
         
