@@ -30,7 +30,7 @@ jobs:
           ls
           cd src/tests
           ls
-          npm reports.test.js
+          ./reports.test.js
           
         
         
