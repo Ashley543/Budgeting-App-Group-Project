@@ -24,7 +24,10 @@ jobs:
       - name: Run Lint
         run: npm run lint
         continue-on-error: false
-      
+
+      - name: Run Tests
+        run: npm test
+        
   cd:
       needs: ci
       runs-on: ubuntu-latest
