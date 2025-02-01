@@ -28,17 +28,9 @@ jobs:
       - name: Run Tests
         run: npm test
 
-      - name: Install V8
-        run: npm i -D @vitest/coverage-v8 --force
 
-      - name: Coverage Report
-        run: npx vitest --coverage.enabled true
-      - name: 'Report Coverage'
-      # Set if: always() to also generate the report if tests are failing
-      # Only works if you set `reportOnFailure: true` in your vite config as specified above
-        if: always() 
-        uses:  davelosert/vitest-coverage-report-action@v2
-  
+      - name: Lightstep Services Change Report
+        uses: lightstep/lightstep-action-snapshot@v0.2.1
   cd:
       needs: ci
       runs-on: ubuntu-latest
