@@ -31,7 +31,7 @@ jobs:
       - name: Code coverage-reporter
         uses: tj-actions/coverage-reporter@v5
         with:
-          token: ${{ github.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 }}
+          token: ${{ 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 }}
           # Specify a coverage command to run the test.
           # coverage-command:
   cd:
