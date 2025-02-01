@@ -28,9 +28,12 @@ jobs:
       - name: Run Tests
         run: npm test
 
-
-      - name: Lightstep Services Change Report
-        uses: lightstep/lightstep-action-snapshot@v0.2.1
+      - name: Code coverage-reporter
+        uses: tj-actions/coverage-reporter@v5
+        with:
+          token: ${{ github.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 }}
+          # Specify a coverage command to run the test.
+          # coverage-command:
   cd:
       needs: ci
       runs-on: ubuntu-latest
