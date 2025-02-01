@@ -28,6 +28,10 @@ jobs:
       - name: Run Tests
         run: npm test
 
+      - name: Install
+        run: npm install @vitest/coverage-v8
+
+
       - name: Code Coverage
         run: npm run coverage
   cd:
@@ -44,9 +48,6 @@ jobs:
 
       - name: Install npm 
         run: npm install
-
-      - name: Install
-        run: npm install -D @vitest/coverage-v8
 
       - name: Run Build
         run: npm run build
