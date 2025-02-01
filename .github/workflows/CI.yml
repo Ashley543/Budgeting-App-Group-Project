@@ -29,9 +29,8 @@ jobs:
         run: npm test
 
       - name: Code Coverage
-        run: npm run coverage
-        env:
-          CI: true
+        uses: davelosert/vitest-coverage-report-action@edb1ad1e6a02b1dd761ddd26739a396ee537c08e
+        
      
         
   cd:
