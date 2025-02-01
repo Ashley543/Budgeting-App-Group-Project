@@ -24,6 +24,9 @@ jobs:
       - name: Run Lint
         run: npm run lint
         continue-on-error: false
+
+      - name: Run tests
+        run: npm test
         
       #- name: Run Tests
         #run: |
@@ -49,12 +52,6 @@ jobs:
 
       - name: Run Build
         run: npm run build
-
-      - name: Deploy to GitHub
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.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 }}
-          publish_dir: dist
 
       #- name: Deploy GitHub Pages site
        # uses: actions/deploy-pages@v4.0.5
