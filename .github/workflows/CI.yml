@@ -24,28 +24,12 @@ jobs:
       - name: Run Lint
         run: npm run lint
         continue-on-error: false
-
-      - name: Upload static files as artifact
-        id: deployment
-        uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
-        with:
-          path: build_outputs_folder/
-
+        
       #- name: Run Tests
         #run: |
           #cd src/tests
           #ls
           #npm run report-test
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: ci
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
 
         
   cd:
@@ -69,7 +53,12 @@ jobs:
       - name: Deploy to GitHub
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets }}
+          github_token: ${{ secrets.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 }}
           publish_dir: dist
+
+      #- name: Deploy GitHub Pages site
+       # uses: actions/deploy-pages@v4.0.5
+       # with:
+        #  token:
           
 
