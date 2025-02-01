@@ -28,7 +28,10 @@ jobs:
       - name: Run Tests
         run: npm test
 
-      - name: 'Test'
+      - name: Install V8
+        run: npm i -D @vitest?coverage-v8
+
+      - name: Coverage Report
         run: npx vitest --coverage.enabled true
       - name: 'Report Coverage'
       # Set if: always() to also generate the report if tests are failing
