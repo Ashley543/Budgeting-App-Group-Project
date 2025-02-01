@@ -29,7 +29,9 @@ jobs:
         run: npm test
 
       - name: Install
-        run: npm install -D @vitest/coverage-v8
+        run: |
+          npm ci
+          npm install -D @vitest/coverage-v8
 
 
       - name: Code Coverage
