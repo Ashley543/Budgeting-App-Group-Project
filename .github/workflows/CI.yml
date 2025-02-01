@@ -29,9 +29,7 @@ jobs:
         run: npm test
 
       - name: Code Coverage
-        uses: davelosert/vitest-coverage-report-action@v2.7.0
-        
-     
+        run: npx vitest --coverage.enabled true
         
   cd:
       needs: ci
