@@ -29,7 +29,7 @@ jobs:
         run: npm test
 
       - name: Code Coverage
-        run: npm code coverage
+        run: npm coverage
         env:
           CI: true
      
