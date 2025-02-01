@@ -25,15 +25,12 @@ jobs:
         run: npm run lint
         continue-on-error: false
 
-      - name: Run tests
+      - name: Run Tests
         run: npm test
         
-      #- name: Run Tests
-        #run: |
-          #cd src/tests
-          #ls
-          #npm run report-test
-
+      - name: npm code coverage
+        env:
+          CI: true
         
   cd:
       needs: ci
